@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="result tier-{{ 3 if scaled >= 21 else (2 if scaled >= 11 else 1) }}"
+         data-tier="{{ 3 if scaled >= 21 else (2 if scaled >= 11 else 1) }}">
+  <span class="badge pulse">{{ rank.badge }}</span>
+  <h1>{{ rank.name }}</h1>
+
+  <div class="score-box">
+    <div class="score-big"><span class="num" data-score="{{ scaled }}">0</span><span>/30</span></div>
+    {% if total != 10 %}
+    <div class="score-note">Raw score: {{ raw }} / {{ max_raw }} (scaled to 30)</div>
+    {% endif %}
+  </div>
+
+  <p class="feedback">{{ rank.feedback }}</p>
+
+  <div class="breakdown">
+    <div class="stat calm"><b>{{ styles.calm }}</b><span>Calm / Dialogue</span></div>
+    <div class="stat avoid"><b>{{ styles.avoidant }}</b><span>Avoidant</span></div>
+    <div class="stat aggr"><b>{{ styles.aggressive }}</b><span>Aggressive</span></div>
+  </div>
+
+  <blockquote>“{{ rank.quote }}”</blockquote>
+
+  <a href="{{ url_for('reset') }}" class="play-again">▶ Play Again</a>
+</section>
+{% endblock %}

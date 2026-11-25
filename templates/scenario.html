@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block hud %}
+<div class="hud" id="hud" data-score="{{ score }}">⭐ <span id="hudNum">{{ score }}</span> pts</div>
+{% endblock %}
+
+{% block content %}
+<div class="progress-wrap">
+  <div class="progress-label">Scenario {{ number }} of {{ total }}</div>
+  <div class="progress"><div class="progress-bar" style="width: {{ percent }}%"></div></div>
+</div>
+
+<section class="scenario">
+  <span class="badge">{{ sc.badge }}</span>
+  <h2>{{ sc.title }}</h2>
+  <p class="story">{{ sc.text }}</p>
+
+  <form method="post" action="{{ url_for('answer') }}" class="choices">
+    <input type="hidden" name="idx" value="{{ number - 1 }}">
+    {% for c in choices %}
+    <button type="submit" name="choice" value="{{ c.value }}" class="choice"
+            data-style="{{ c.style }}" data-pts="{{ c.pts }}">
+      <span class="letter">{{ c.letter }}</span>
+      <span class="choice-body">
+        <span class="choice-label">{{ c.label }}</span>
+        <span class="choice-text">{{ c.text }}</span>
+      </span>
+    </button>
+    {% endfor %}
+  </form>
+</section>
+{% endblock %}
