@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Host login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='live.css') }}">
+</head>
+<body class="phone">
+  <main>
+    <section class="card">
+      <h2>Host login</h2>
+      <form method="post">
+        <input class="field" type="password" name="password" placeholder="Password" autofocus required>
+        {% if error %}<p class="err">{{ error }}</p>{% endif %}
+        <button class="btn" type="submit">Enter</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

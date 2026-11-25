@@ -1,0 +1,23 @@
+# One "Why it matters" card per scenario (same order as SCENARIOS).
+WHY = [
+    {"concept": "Attack the problem, not the person",
+     "text": "Blaming people makes them defend themselves instead of fixing things. Conflict researchers Fisher and Ury advise separating the people from the problem."},
+    {"concept": "Invent options for mutual gain",
+     "text": "Most disputes feel like one winner and one loser until someone widens the choices. Splitting, trading or taking turns often leaves everyone better off."},
+    {"concept": "Interests, not positions",
+     "text": "'Louder' and 'quieter' are positions. The real needs are energy and focus, and headphones or quiet hours can serve both."},
+    {"concept": "Repair early with a small apology",
+     "text": "A quick apology and a step back resets the mood. Small repairs stop a minor mistake from becoming a lasting grudge."},
+    {"concept": "The escalation spiral",
+     "text": "Each insult invites a bigger one. Conflict researchers call this an escalation spiral, and a joke or a pause is often the fastest way to break it."},
+    {"concept": "The power of a third party",
+     "text": "Bystanders can fuel a conflict or calm it. One person who stays friendly and acknowledges the harm can turn the whole crowd around."},
+    {"concept": "Use objective criteria",
+     "text": "Comparing real costs side by side turns a fight over wishes into a decision about facts, and a fair trade-off becomes easier to accept."},
+    {"concept": "Say it early, say it gently",
+     "text": "Unspoken irritations grow. A quiet, friendly offer solves the problem before sighs and glares turn it into a bigger one."},
+    {"concept": "Agree on a fair process",
+     "text": "When nobody trusts the judge, a shared rule such as a redo or a neutral call keeps the game going and keeps everyone respected."},
+    {"concept": "Share the data, share the rules",
+     "text": "Nobel laureate Elinor Ostrom found that communities manage shared resources best through open information and clear rules they set together."},
+]

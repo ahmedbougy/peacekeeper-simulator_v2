@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>Peacekeeper Simulator</h1>
+  <p class="lead">Ten situations. Three ways to respond. How well can you keep the peace?</p>
+
+  <form method="post" action="{{ url_for('start') }}" class="mode-form">
+    <button type="submit" name="mode" value="full" class="mode-card">
+      <span class="mode-title">Full Run</span>
+      <span class="mode-sub">10 Scenarios</span>
+    </button>
+    <button type="submit" name="mode" value="quick" class="mode-card alt">
+      <span class="mode-title">Quick Demo</span>
+      <span class="mode-sub">5 Scenarios</span>
+    </button>
+    <a href="{{ url_for('live.play') }}" class="mode-card"
+       style="text-decoration:none;border-color:#4dabff">
+      <span class="mode-title">Join Live Room</span>
+      <span class="mode-sub">Play with the whole class</span>
+    </a>
+  </form>
+</section>
+{% endblock %}
